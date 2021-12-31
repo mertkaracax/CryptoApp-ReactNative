@@ -1,0 +1,84 @@
+async function storeObjectValue(key, value) {       // bu kodları BuySell dosyasında bir useffect içine                                       
+  try {                                             //atarak yerel depolamaya initial value ları atıyorum
+    const jsonValue = JSON.stringify(value);
+    await AsyncStorage.setItem(key, jsonValue);
+  } catch (e) {
+    console.log(e);
+  }
+  console.log('Done.');
+}
+
+storeObjectValue('coins', [
+  {
+    name: 'FTT',
+    price: 0,
+    entryPrice: 53.7,
+    quantity: 6.3,
+    spent: 0,
+    pnl: 0,
+    roe: 0,
+  },
+  {
+    name: 'PSG',
+    price: 0,
+    entryPrice: 23.41,
+    quantity: 10.73,
+    spent: 0,
+    pnl: 0,
+    roe: 0,
+  },
+  {
+    name: 'THETA',
+    price: 0,
+    entryPrice: 4.39,
+    quantity: 11.3,
+    spent: 0,
+    pnl: 0,
+    roe: 0,
+  },
+  {
+    name: 'GRT',
+    price: 0,
+    entryPrice: 1.36,
+    quantity: 131,
+    spent: 0,
+    pnl: 0,
+    roe: 0,
+  },
+  {
+    name: 'YGG',
+    price: 0,
+    entryPrice: 7.13,
+    quantity: 12.9,
+    spent: 0,
+    pnl: 0,
+    roe: 0,
+  },
+  {
+    name: 'ICP',
+    price: 0,
+    entryPrice: 39.34,
+    quantity: 0.76,
+    spent: 0,
+    pnl: 0,
+    roe: 0,
+  },
+  {
+    name: 'SUPER',
+    price: 0,
+    entryPrice: 3.1,
+    quantity: 11.79,
+    spent: 0,
+    pnl: 0,
+    roe: 0,
+  },
+  {
+    name: 'ATM',
+    price: 0,
+    entryPrice: 11.87,
+    quantity: 1.68,
+    spent: 0,
+    pnl: 0,
+    roe: 0,
+  }
+]);
